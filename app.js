@@ -27,8 +27,12 @@ function calculateLifeExpectancy({
 }) {
     const now = new Date();
     const birthDate = new Date(dob);
-    const msInWeeks = 604800000;
-    let weeksLived = (now - birthDate) / msInWeeks;
+    const yearsLived = now.getFullYear() - birthDate.getFullYear();
+    const monthsLived = now.getMonth() - birthDate.getMonth();
+    const daysLived = now.getDay() - birthDate.getDay();
+    let weeksLived = Math.floor(
+        yearsLived * 52 + monthsLived * 4 + daysLived / 7
+    );
 
     const totalWeeks = Math.round(lifeExpectancy) * 52;
 
