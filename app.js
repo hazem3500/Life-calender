@@ -60,7 +60,7 @@ function fetchLifeExpectancy(e) {
     const country = e.target.country_name.value;
     const bday = e.target.bday.value;
     const gender = e.target.gender.value;
-    fetch(`https://api.population.io:80/1.0/life-expectancy/total/${gender}/${country}/${bday}/
+    fetch(`http://api.population.io:80/1.0/life-expectancy/total/${gender}/${country}/${bday}/
 `)
         .then((res) => res.json())
         .then((res) => {
