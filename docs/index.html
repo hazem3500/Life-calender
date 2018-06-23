@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Life Calender</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" async></script>
+</head>
+
+<body>
+    <div class="modal">
+        <form id="lifeForm" action="lifeForm" name="lifeForm">
+            <label for="country_name">Country</label>
+            <input id="country_name" name="country_name" list="country" placeholder="Enter your Country" required/>
+            <datalist id="country">
+                <option value="Afghanistan"></option>
+                <option value="AFRICA"></option>
+                <option value="Albania"></option>
+                <option value="Algeria"></option>
+                <option value="Angola"></option>
+                <option value="Antigua and Barbuda"></option>
+                <option value="Arab Rep of Egypt"></option>
+                <option value="Argentina"></option>
+                <option value="Armenia"></option>
+                <option value="Aruba"></option>
+                <option value="ASIA"></option>
+                <option value="Australia"></option>
+                <option value="Australia/New Zealand"></option>
+                <option value="Austria"></option>
+                <option value="Azerbaijan"></option>
+                <option value="The Bahamas"></option>
+                <option value="Bahrain"></option>
+                <option value="Bangladesh"></option>
+                <option value="Barbados"></option>
+                <option value="Belarus"></option>
+                <option value="Belgium"></option>
+                <option value="Belize"></option>
+                <option value="Benin"></option>
+                <option value="Bhutan"></option>
+                <option value="Bolivia"></option>
+                <option value="Bosnia and Herzegovina"></option>
+                <option value="Botswana"></option>
+                <option value="Brazil"></option>
+                <option value="Brunei Darussalam"></option>
+                <option value="Bulgaria"></option>
+                <option value="Burkina Faso"></option>
+                <option value="Burundi"></option>
+                <option value="Cote-d-Ivoire"></option>
+                <option value="Cabo Verde"></option>
+                <option value="Cambodia"></option>
+                <option value="Cameroon"></option>
+                <option value="Canada"></option>
+                <option value="Caribbean"></option>
+                <option value="Central African Republic"></option>
+                <option value="Central America"></option>
+                <option value="Central Asia"></option>
+                <option value="Chad"></option>
+                <option value="Channel Islands"></option>
+                <option value="Chile"></option>
+                <option value="China"></option>
+                <option value="Hong Kong SAR-China"></option>
+                <option value="Macao SAR China"></option>
+                <option value="Colombia"></option>
+                <option value="Comoros"></option>
+                <option value="Congo"></option>
+                <option value="Costa Rica"></option>
+                <option value="Croatia"></option>
+                <option value="Cuba"></option>
+                <option value="Curacao"></option>
+                <option value="Cyprus"></option>
+                <option value="Czech Republic"></option>
+                <option value="Dem Peoples Rep of Korea"></option>
+                <option value="Dem Rep of Congo"></option>
+                <option value="Denmark"></option>
+                <option value="Djibouti"></option>
+                <option value="Dominican Republic"></option>
+                <option value="Eastern Africa"></option>
+                <option value="Eastern Asia"></option>
+                <option value="Eastern Europe"></option>
+                <option value="Ecuador"></option>
+                <option value="El Salvador"></option>
+                <option value="Equatorial Guinea"></option>
+                <option value="Eritrea"></option>
+                <option value="Estonia"></option>
+                <option value="Ethiopia"></option>
+                <option value="EUROPE"></option>
+                <option value="Federated States of Micronesia"></option>
+                <option value="Fiji"></option>
+                <option value="Finland"></option>
+                <option value="France"></option>
+                <option value="French Guiana"></option>
+                <option value="French Polynesia"></option>
+                <option value="FYR Macedonia"></option>
+                <option value="Gabon"></option>
+                <option value="The Gambia"></option>
+                <option value="Georgia"></option>
+                <option value="Germany"></option>
+                <option value="Ghana"></option>
+                <option value="Greece"></option>
+                <option value="Grenada"></option>
+                <option value="Guadeloupe"></option>
+                <option value="Guam"></option>
+                <option value="Guatemala"></option>
+                <option value="Guinea"></option>
+                <option value="Guinea-Bissau"></option>
+                <option value="Guyana"></option>
+                <option value="Haiti"></option>
+                <option value="Honduras"></option>
+                <option value="Hungary"></option>
+                <option value="Iceland"></option>
+                <option value="India"></option>
+                <option value="Indonesia"></option>
+                <option value="Islamic Republic of Iran"></option>
+                <option value="Iraq"></option>
+                <option value="Ireland"></option>
+                <option value="Israel"></option>
+                <option value="Italy"></option>
+                <option value="Jamaica"></option>
+                <option value="Japan"></option>
+                <option value="Jordan"></option>
+                <option value="Kazakhstan"></option>
+                <option value="Kenya"></option>
+                <option value="Kiribati"></option>
+                <option value="Kuwait"></option>
+                <option value="Kyrgyz Republic"></option>
+                <option value="Lao PDR"></option>
+                <option value="LATIN AMERICA AND THE CARIBBEAN"></option>
+                <option value="Latvia"></option>
+                <option value="Least developed countries"></option>
+                <option value="Lebanon"></option>
+                <option value="Lesotho"></option>
+                <option value="Less developed regions"></option>
+                <option value="excluding China"></option>
+                <option value="Liberia"></option>
+                <option value="Libya"></option>
+                <option value="Lithuania"></option>
+                <option value="Luxembourg"></option>
+                <option value="Madagascar"></option>
+                <option value="Malawi"></option>
+                <option value="Malaysia"></option>
+                <option value="Maldives"></option>
+                <option value="Mali"></option>
+                <option value="Malta"></option>
+                <option value="Martinique"></option>
+                <option value="Mauritania"></option>
+                <option value="Mauritius"></option>
+                <option value="Mayotte"></option>
+                <option value="Melanesia"></option>
+                <option value="Mexico"></option>
+                <option value="Micronesia"></option>
+                <option value="Middle Africa"></option>
+                <option value="Moldova"></option>
+                <option value="Mongolia"></option>
+                <option value="Montenegro"></option>
+                <option value="More developed regions"></option>
+                <option value="Morocco"></option>
+                <option value="Mozambique"></option>
+                <option value="Myanmar"></option>
+                <option value="Namibia"></option>
+                <option value="Nepal"></option>
+                <option value="The Netherlands"></option>
+                <option value="New Caledonia"></option>
+                <option value="New Zealand"></option>
+                <option value="Nicaragua"></option>
+                <option value="Niger"></option>
+                <option value="Nigeria"></option>
+                <option value="Northern Africa"></option>
+                <option value="NORTHERN AMERICA"></option>
+                <option value="Northern Europe"></option>
+                <option value="Norway"></option>
+                <option value="OCEANIA"></option>
+                <option value="Oman"></option>
+                <option value="Other non-specified areas"></option>
+                <option value="Pakistan"></option>
+                <option value="Panama"></option>
+                <option value="Papua New Guinea"></option>
+                <option value="Paraguay"></option>
+                <option value="Peru"></option>
+                <option value="Philippines"></option>
+                <option value="Poland"></option>
+                <option value="Polynesia"></option>
+                <option value="Portugal"></option>
+                <option value="Puerto Rico"></option>
+                <option value="Qatar"></option>
+                <option value="Reunion"></option>
+                <option value="RB-de-Venezuela"></option>
+                <option value="Rep of Korea"></option>
+                <option value="Rep of Yemen"></option>
+                <option value="Romania"></option>
+                <option value="Russian Federation"></option>
+                <option value="Rwanda"></option>
+                <option value="St-Lucia"></option>
+                <option value="St-Vincent and the Grenadines"></option>
+                <option value="Samoa"></option>
+                <option value="Sao Tome and Principe"></option>
+                <option value="Saudi Arabia"></option>
+                <option value="Senegal"></option>
+                <option value="Serbia"></option>
+                <option value="Seychelles"></option>
+                <option value="Sierra Leone"></option>
+                <option value="Singapore"></option>
+                <option value="Slovak Republic"></option>
+                <option value="Slovenia"></option>
+                <option value="Solomon Islands"></option>
+                <option value="Somalia"></option>
+                <option value="South Africa"></option>
+                <option value="South America"></option>
+                <option value="South Sudan"></option>
+                <option value="South-Central Asia"></option>
+                <option value="South-Eastern Asia"></option>
+                <option value="Southern Africa"></option>
+                <option value="Southern Asia"></option>
+                <option value="Southern Europe"></option>
+                <option value="Spain"></option>
+                <option value="Sri Lanka"></option>
+                <option value="West Bank and Gaza"></option>
+                <option value="Sub-Saharan Africa"></option>
+                <option value="Sudan"></option>
+                <option value="Suriname"></option>
+                <option value="Swaziland"></option>
+                <option value="Sweden"></option>
+                <option value="Switzerland"></option>
+                <option value="Syrian Arab Rep"></option>
+                <option value="Tajikistan"></option>
+                <option value="Tanzania"></option>
+                <option value="Thailand"></option>
+                <option value="Timor-Leste"></option>
+                <option value="Togo"></option>
+                <option value="Tonga"></option>
+                <option value="Trinidad and Tobago"></option>
+                <option value="Tunisia"></option>
+                <option value="Turkey"></option>
+                <option value="Turkmenistan"></option>
+                <option value="Uganda"></option>
+                <option value="Ukraine"></option>
+                <option value="United Arab Emirates"></option>
+                <option value="United Kingdom"></option>
+                <option value="United States"></option>
+                <option value="US Virgin Islands"></option>
+                <option value="Uruguay"></option>
+                <option value="Uzbekistan"></option>
+                <option value="Vanuatu"></option>
+                <option value="Vietnam"></option>
+                <option value="Western Africa"></option>
+                <option value="Western Asia"></option>
+                <option value="Western Europe"></option>
+                <option value="Western Sahara"></option>
+                <option value="World"></option>
+                <option value="Zambia"></option>
+                <option value="Zimbabwe"></option>
+
+            </datalist>
+            <label for="bday">Birth Date</label>
+            <input id="bday" type="date" name="bday" required>
+            <label for="male">Gender</label>
+            <div class="gender">
+
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <span>Male
+                    </span>
+                </label>
+
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <span> Female
+                    </span>
+                </label>
+            </div>
+            <button type="submit ">Generate Life Calender</button>
+        </form>
+    </div>
+    <header>
+        <h2 class="title ">LIFE CALENDER</h2>
+    </header>
+    <div class="wrapper ">
+        <div>
+            <div class="calender__title calender__title-horizontal ">WEEKS OF THE YEAR
+                <div class="calender__title-arrow "></div>
+            </div>
+            <div class="calender ">
+                <div class="calender__title calender__title-vertical ">
+                    <div class="calender__title-arrow "></div>YEARS OF YOUR LIFE</div>
+                <div class="calender__content ">
+                </div>
+            </div>
+            <div class="age ">
+                <div class="now ">NOW</div>
+                <div>YOU'RE</div>
+                <div class="age__num "></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <button id="changeData">Change Your Data</button>
+        <div>
+            <span>Inspired By</span>
+            <a href="https://store.waitbutwhy.com/products/life-calendar-24in-x-36in">Wait But Why</a>
+        </div>
+        <div>
+            <span>Source</span>
+            <a href="http://api.population.io/">population.io</a>
+        </div>
+    </footer>
+</body>
+
+</html>
