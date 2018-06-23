@@ -1,3 +1,3 @@
 # Life-calendar
 
-Link to site: http://life-calender.surge.sh/
+Link to site: http://life-calendar.surge.sh/
