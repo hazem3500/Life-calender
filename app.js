@@ -1,4 +1,4 @@
-const calender = document.querySelector('.calender__content');
+const calendar = document.querySelector('.calendar__content');
 const ageElement = document.querySelector('.age__num');
 const lifeForm = document.querySelector('#lifeForm');
 const modal = document.querySelector('.modal');
@@ -45,7 +45,7 @@ function calculateLifeExpectancy({
             weeksLived-- > 0 ? 'week-lived' : ''
         }"></div>`;
     }
-    calender.innerHTML = weeksElement;
+    calendar.innerHTML = weeksElement;
     ageElement.innerHTML = `${Math.round(lifeExpectancy)}`;
 }
 

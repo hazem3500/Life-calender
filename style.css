@@ -113,30 +113,30 @@ html {
     font-size: 5.5rem;
 }
 
-.calender {
+.calendar {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     transform: translateX(0px);
 }
 
-.calender__title {
+.calendar__title {
     display: inline-block;
     font-size: 1.2rem;
     font-weight: 600;
     font-family: 'Shanti', sans-serif;
 }
 
-.calender__title-vertical {
+.calendar__title-vertical {
     white-space: nowrap;
     transform: rotate(-90deg) translateX(-195px);
 }
 
-.calender__title-horizontal {
+.calendar__title-horizontal {
     transform: translateX(147px);
 }
 
-.calender__title-arrow {
+.calendar__title-arrow {
     display: inline-block;
     position: relative;
     margin: 0 10px;
@@ -146,7 +146,7 @@ html {
     margin-bottom: 5px;
 }
 
-.calender__title-arrow::after {
+.calendar__title-arrow::after {
     content: '';
     position: absolute;
     right: -10px;
@@ -160,11 +160,11 @@ html {
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-.calender__title-vertical .calender__title-arrow {
+.calendar__title-vertical .calendar__title-arrow {
     transform: rotate(180deg);
 }
 
-.calender__content {
+.calendar__content {
     transform: translateX(-120px);
     display: grid;
     grid-template-columns: repeat(53, 20px);
@@ -247,7 +247,7 @@ footer button:focus {
 }
 
 @media (max-width: 1500px) {
-    .calender__content {
+    .calendar__content {
         grid-template-columns: repeat(53, 15px);
     }
 
@@ -262,7 +262,7 @@ footer button:focus {
 }
 
 @media (max-width: 1200px) {
-    .calender__content {
+    .calendar__content {
         grid-template-columns: repeat(53, 10px);
     }
 
@@ -277,7 +277,7 @@ footer button:focus {
 }
 
 @media (max-width: 900px) {
-    .calender__content {
+    .calendar__content {
         grid-template-columns: repeat(53, 8px);
         grid-gap: 4px;
     }
@@ -295,7 +295,7 @@ footer button:focus {
 }
 
 @media (max-width: 800px) {
-    .calender__content {
+    .calendar__content {
         grid-template-columns: repeat(53, 6px);
         grid-gap: 3px;
     }
@@ -313,7 +313,7 @@ footer button:focus {
 }
 
 @media (max-width: 700px) {
-    .calender__content {
+    .calendar__content {
         grid-template-columns: repeat(53, 5px);
         grid-gap: 3px;
     }
@@ -331,7 +331,7 @@ footer button:focus {
 }
 
 @media (max-width: 600px) {
-    .calender__content {
+    .calendar__content {
         grid-template-columns: repeat(53, 4px);
         grid-gap: 3px;
     }
