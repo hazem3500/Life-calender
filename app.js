@@ -27,12 +27,11 @@ function calculateLifeExpectancy({
 }) {
     const now = new Date();
     const birthDate = new Date(dob);
-    const yearsLived = now.getFullYear() - birthDate.getFullYear();
-    const monthsLived = now.getMonth() - birthDate.getMonth();
-    const daysLived = now.getDay() - birthDate.getDay();
-    let weeksLived = Math.floor(
-        yearsLived * 52 + monthsLived * 4 + daysLived / 7
-    );
+    const diff = now.getTime() - birthDate.getTime();
+    const daysLived = diff / 864e5;
+    const monthsLived = daysLived/30.4375;
+    const yearsLived = daysLived/365.24;
+    let weeksLived = Math.floor(yearsLived * 52);
 
     const totalWeeks = Math.round(lifeExpectancy) * 52;
 
@@ -44,7 +43,7 @@ function calculateLifeExpectancy({
 
     for (let i = 0; i < totalWeeks; i++) {
         weeksElement += `
-        ${i % 52 == 0 ? `<div class="number">${i / 52 + 1}</div>` : ''}
+        ${i % 52 == 0 ? `<div class="number">${i / 52}</div>` : ''}
         <div id="${i + 1}" class="week ${
             weeksLived-- > 0 ? 'week-lived' : ''
         }"></div>`;
@@ -64,7 +63,7 @@ function fetchLifeExpectancy(e) {
     const country = e.target.country_name.value;
     const bday = e.target.bday.value;
     const gender = e.target.gender.value;
-    fetch(`http://api.population.io:80/1.0/life-expectancy/total/${gender}/${country}/${bday}/
+    fetch(`http://54.72.28.201:80/1.0/life-expectancy/total/${gender}/${country}/${bday}/
 `)
         .then((res) => res.json())
         .then((res) => {
